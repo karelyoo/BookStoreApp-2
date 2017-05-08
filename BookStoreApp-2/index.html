@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="store">
+	<head>
+		<title>BookStoreApp-2</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+<body >
+ <div class="container" id="#principal">
+        <nav id="Nav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container" id="letra">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only"></span>Menu<i class="fa fa-bars"></i>
+                    </button>
+                    <img src="public/img/logo.png" alt="logo" id="img1">
+                    <a id="DA" class="navbar-brand" href="index.html"><b>BookStoreApp</b></a>
+                </div>
+                 <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav navbar-right">
+                    	<li>
+							<div class="row">
+								<input id="busca" type="text" ng-model="searchBox" placeholder="BUSCAR">
+								<select id="ordena" ng-model="sortColumn" class="pull-right">
+									<option value="id">ID</option>
+									<option value="titulo">Titulo</option>
+									<option value="editorial">Editorial</option>
+								</select>
+								<p id="ordena" class="pull-right"><b><b>Ordenar Por: </b></b></p>
+							</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+         <header>
+            <div class="container-fluid" id="inicio">
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="inicio-2">
+                        <img id="img3" src="public/img/head.png" alt="">
+                        <div class="text">
+                            <h1 class="name" style="font-size: 250%;"><b>BOOKSTOREAPP</b></h1>
+                            <hr style="height: 10px;">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+</div>
+</div>
+<br>
+<br>
+
+<div class="container">
+<div id="dos" ng-controller="StoreController as store">
+<div class="row" ng-repeat="libs in store.lib | filter: searchBox | orderBy: sortColumn">
+					<div class="col-lg-12">				
+						<div class="row rows2">
+							<div class="col-lg-3 text-center">
+								<img id="img2" src="{{libs.imagen}}">
+							</div>
+						
+							<div class="col-lg-8" id="cont">
+								<a href="" id="titulo"><h3>{{libs.titulo}}</h3></a>
+								<br>
+								<h4><b>{{libs.editorial}}</b></h4>
+								<p>{{libs.descripcion}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+<hr>
+<footer  class="text-center" >
+            <div class="footer-above">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3><b>Libros</b></h3>
+                            <p><b>visita nuestra pagina y ten acceso
+                            <br>a toda nuestra variedad de Libros</b></p>
+                        </div>
+                        <div class="footer-col col-lg-4">
+                        	<div class="col-lg-12">
+                            <h1><b>Website created by Karely Olivas</b></h1>
+                        </div>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3><b>Visitanos en: </b></h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <button class="btn btn-primary"> 
+                                        <a href="www.facebook.com"><img src="public/img/fb.png" alt=""></a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-primary">
+                                        <a href="www.twitter.com"><img src="public/img/tw.png" alt=""></a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	</body>
+</html>

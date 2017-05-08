@@ -1,0 +1,52 @@
+#Nav{
+background: #202020;
+color: #777;
+}
+#dos{
+	margin-top: -5%;
+}
+#img1{
+	width: 15%;
+	height: 50px;
+	margin-left: -40%;
+}
+#img2{
+	margin-top: 15%;
+	margin-left: 30%;
+	width: 150px;
+	height: 230px;
+}
+#img3{
+	width: 100%;
+	height: 150px;
+	margin-top: 5%;
+}
+#btnGen{
+	margin-top: 12%;
+	height: 30px;
+	background-color: ;
+}
+#titulo{
+	text-decoration: underline;
+}
+#tit{
+	margin-left: 5%;
+}
+#cont{
+	margin-top: 1.5%;
+}
+#busca{
+	margin-top: 4%;
+	margin-left: -6%;
+}
+#ordena{
+	margin-top: 5%;
+	margin-left: 2%;
+}
+footer{
+	background: #202020;
+	color: #777;
+}
+.rows2{
+	border: 1px solid;
+}
